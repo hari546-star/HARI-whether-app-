@@ -1,0 +1,116 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://media-hosting.imagekit.io//ef982d0d4b10427e/tomasz-paciorek-KFM6LVtbUxA-unsplash.jpg?Expires=1835589009&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=uF222OLPSCR~dwSfMYwO9hmMAoLBFyK2pUd2jgK1HDi~612YA1RBR6Gc1k7oRZDxqsUJHYl9g-XuV-tagWmvD34xARf3y7rhSoUbUhceOquVqXaPibf-l3dLaaHRChvzDI0dBCkz1CrbML4mEo0Wr80FU8k~~PmFvHbCwlplu2GBjD3O5w3KqfRzwEMPfqzQlt8djHCgr04ABcnRH1YsWVA9vree5HgRgaNZQ-0eQ1~6G7Kl~SvAFbA~khcifwmDfEZDS~l1pZw0wGVTvej1nIYEnb73w6rlbJi8jHyJrLuLYqdz4Fi8mMEPG8HOXv57Gv8egxKVQyM8MX-gbzTqNw__'); /* Weather-themed background (sky with clouds) */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: moveBackground 20s linear infinite; 
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    transform: perspective(600px);
+    animation: floatContainer 3s infinite ease-in-out alternate;
+}
+
+@keyframes floatContainer {
+    from {
+        transform: translateY(0px) perspective(600px) rotateX(0deg);
+    }
+    to {
+        transform: translateY(-20px) perspective(600px) rotateX(10deg);
+    }
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://i.ibb.co/CpBJJTz/an-attractive-image-for-input-background.jpg'); /* Input field background image */
+    transform: perspective(600px);
+    animation: floatInput 3s infinite ease-in-out alternate;
+}
+
+@keyframes floatInput {
+    from {
+        transform: translateY(0px) perspective(600px) rotateX(0deg);
+    }
+    to {
+        transform: translateY(-10px) perspective(600px) rotateX(5deg);
+    }
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    transform: perspective(600px);
+    animation: floatButton 3s infinite ease-in-out alternate;
+}
+
+@keyframes floatButton {
+    from {
+        transform: translateY(0px) perspective(600px) rotateX(0deg);
+    }
+    to {
+        transform: translateY(-10px) perspective(600px) rotateX(5deg);
+    }
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1) rotateY(10deg);
+}
+
+.weather-result {
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #ffffff; 
+    padding: 10px;
+    border-radius: 5px;
+    transform: perspective(600px);
+    animation: floatWeather 3s infinite ease-in-out alternate;
+}
+
+@keyframes floatWeather {
+    from {
+        transform: translateY(0px) perspective(600px) rotateX(0deg);
+    }
+    to {
+        transform: translateY(-10px) perspective(600px) rotateX(5deg);
+    }
+}
+
+.weather-result p {
+    margin: 5px 0;
+}
